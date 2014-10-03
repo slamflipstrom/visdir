@@ -1,0 +1,29 @@
+<h1>New Listing</h1>
+
+<%= form_for @listing do |f| %>
+
+  <div class='field'>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :budget_type %><br />
+    <%= f.text_field :budget_type %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+
+  <%= f.fields_for :category do |a| %>
+
+    <div class='field'>
+      <%= a.label :name %><br />
+      <%= a.text_field :name %>
+    </div>
+
+<% end %>
+
+<% end %>
