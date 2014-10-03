@@ -10,11 +10,11 @@ header{
 }
 
 main{
-  background: url("../images/halftone.png");
+  background: url("/assets/halftone.png");
 }
 
 #header-logo a{
-  @include image_replacement("../images/logo.svg", 119px, 59px);
+  @include image_replacement("/assets/logo.svg", 119px, 59px);
 }
 
 #header-nav-ul{
@@ -75,10 +75,10 @@ main{
 }
 
 .card-fav{
-  @include image_replacement("../images/fav.png", 21px, 21px)
+  @include image_replacement("/assets/fav.png", 21px, 21px)
 }
 .card-is-faved{
-  @include image_replacement("../images/unfav.png", 21px, 21px)
+  @include image_replacement("/assets/unfav.png", 21px, 21px)
 }
 
 .card-header{
