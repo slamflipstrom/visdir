@@ -1,6 +1,6 @@
 Visdir::Application.routes.draw do
 
-  get "/" => "views#index", :as => "root"
+  root :to => 'pages#index'
   
   resources :users
   resources :listings
