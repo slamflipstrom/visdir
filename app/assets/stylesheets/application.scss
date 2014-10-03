@@ -90,6 +90,32 @@ main{
   }
 }
 
+.listing-details{
+  @extend %sans_font;
+  
+  a{
+    color: #1F7193;
+  }
+}
+
+.listing-details-header{
+  @extend .card-header;
+}
+.listing-details-subheader{
+  @extend .card-header;
+}
+
+.listing-details-description{
+  @extend %rounded_background;
+  @extend %inset_shadow;
+  background: #EAEAEA;
+}
+
+.listing-details-contact-item{
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
 .card-pro .card-header{
   font-size: 26px;
 }

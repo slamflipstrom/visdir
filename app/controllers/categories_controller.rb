@@ -1,8 +1,7 @@
 class CategoriesController < ApplicationController  
   
   def index
-    @current_user=User.find(session[:user_id])
-    @categories = @current_user.categories
+    @categories = Category.all
   end
 
   def show

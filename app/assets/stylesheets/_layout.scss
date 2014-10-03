@@ -107,6 +107,11 @@
   }
 }
 
+.card-full{
+  width: 100%;
+  float: none;
+}
+
 .card-fav{
   position: absolute;
   right: 20px;
@@ -133,6 +138,22 @@
   .card-details-budget{
     display: inline-block;
   }
+}
+
+.listing-details .listing-details-subheader{
+  text-align: left;
+}
+
+.listing-details-description{
+  padding: 15px;
+}
+
+.listing-details-contact{
+  text-align: center;
+}
+.listing-details-contact-item{
+  display: inline-block;
+  margin: 0 10px;
 }
 
 #footer{
