@@ -3,7 +3,7 @@
 <%= form_for @listing do |f| %>
 
   <div class='field'>
-    <%= f.label :name %>8
+    <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
 
@@ -20,11 +20,24 @@
   <%= f.fields_for :category do |a| %>
 
     <div class='field'>
-      <%= a.label :name %><br />
+      <%= a.label 'Category' %><br />
       <%= a.text_field :name %>
     </div>
 
-<% end %>
+    <% end %>
+    
+ <div class='field'>
+   <%= f.label 'Upload a sample of your work' %><br />
+   <%= f.text_field :photo %>
+ </div>
+ 
+ <div class='field'>
+    <%= f.hidden_field :user_id, :value => session[:user_id] %>
+ </div>
+  
+  
+
+  
 
 <% end %>
 
