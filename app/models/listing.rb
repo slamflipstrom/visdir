@@ -1,5 +1,5 @@
 class Listing < ActiveRecord::Base
-  attr_accessible :budget_type, :category_id, :location, :name, :user_id, :categories_attributes
+  attr_accessible :budget_type, :category_id, :location, :name, :user_id, :photo, :categories_attributes
   belongs_to :users
   belongs_to :categories
   
