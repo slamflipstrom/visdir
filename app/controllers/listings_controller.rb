@@ -1,8 +1,8 @@
 class ListingsController < ApplicationController
   
   def index
-    @current_user=User.find(session[:user_id])
-    @listings = @current_user.listings
+    @listings = Listing.all
+    # @current_user_listings = current_user.listings
   end
 
   def show

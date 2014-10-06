@@ -1,15 +1,22 @@
-<% @listings.each do |listing| %>
+<h1>Listings:</h1>
 
-<%= listing.name %>
-
-<%= listing.location %>
-
-<%= listing.budget_type %>
-
-<%= listing.photo %>
-
-<%= listing.user_id %>
-
-<%= listing.category_id %>
-
-<% end %>
+<ul>
+  <% @listings.each do |listing| %>
+    <%= content_tag_for :li, listing do %>
+      
+      <%= listing.name %>
+      
+      <%= listing.location %>
+      
+      <%= listing.budget_type %>
+      
+      <%= listing.photo %>
+      
+      <%= listing.user_id %>
+      
+      <%= listing.category_id %>
+      
+      <% end %>
+   
+    <% end %>
+</ul>

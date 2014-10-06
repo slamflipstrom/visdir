@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>VisDir</title> 
-<!--- <%= @current_user %> -->
   <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Roboto+Slab:700,400' type='text/css'>
   <link rel="stylesheet" href="css/application.css" type='text/css'>
   <script type="text/javascript" src="scripts/application.js"></script>
@@ -24,8 +23,12 @@
       <div id="header-account-label">Photographers</div>
     
       <ul id="header-account-ul">
-        <li id="header-account-login"><a href="/login">Log in</a> or</li>
-        <li id="header-account-signup"><a href="/signup">Sign up</a></li>
+  	    <% if current_user %>
+  	      <%= current_user.email %> <%= link_to "Log Out", logout_path %>
+  	    <% else %>
+          <li id="header-account-login"><a href="/login">Log in</a> or</li>
+          <li id="header-account-signup"><a href="/signup">Sign up</a></li>
+  	    <% end %>
       </ul>
     </div>
   </div>
